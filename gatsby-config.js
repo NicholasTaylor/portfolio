@@ -18,7 +18,10 @@ module.exports = {
       options: {
         typekit: {
           id: `edf5gwc`
-        }
+        },
+        google: {
+          families: ['Bebas Neue'],
+        },
       }
     },
   ],
