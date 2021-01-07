@@ -2,7 +2,7 @@
 
 .l-container {
   width: 100vw;
-  background-color: $color-bg;
+  /*background-color: $color-bg;*/
   color: $color-text;
   font-family: $font-family-base;
   font-size: .95rem;
@@ -10,14 +10,22 @@
   font-weight: 400;
 }
 
-.c-slide {
-  width: 90vw;
+.c-slideContainer {
+  background: linear-gradient($color-bg, $color-bg-alt, $color-bg-alt2);
+  width: 100vw;
   height: 100vh;
-  margin: 0 auto;
+}
+
+.c-slide {
+  width: 75vw;
+  height: 100vh;
+  margin: 0;
   position: relative;
   &__content {
     position: absolute;
-    top: 4%;
+    bottom: 33%;
+    left: 5vw;
+    transform: translateY(50%)
   }
   &__greeting {
     @include headline;
@@ -26,20 +34,19 @@
     @include headline;
   }
   &__desc {
-    padding: .5em 0 2em 0;
+    padding: .5em 0 1em 0;
   }
   &__btn {
-    font-family: $font-family-headline;
     background-color: $color-accent;
     display: inline-block;
-    padding: .5em 1em;
+    padding: .75em;
     margin: 0 1em 0 0;
     border: 1px solid transparent;
     transition: .25s;
-    font-size: 1.1rem;
+    font-size: .8rem;
     @include standout;
     a {
-      color: $color-bg;
+      color: $color-text;
       text-decoration: none;
     }
     &:hover {

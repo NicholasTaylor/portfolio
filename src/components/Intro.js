@@ -4,20 +4,24 @@ class Intro extends React.Component {
     render(){
         return (
             <div
-            className="c-slide"
+                className="c-slideContainer"
             >
                 <div
-                    className="c-slide__content"
+                className="c-slide"
                 >
                     <div
-                        className="c-slide__greeting"
+                        className="c-slide__content"
                     >
-                        Hello world
-                    </div>
-                    <div
-                        className="c-slide__desc"
-                    >
-                        Lorem Ipsum.
+                        <div
+                            className="c-slide__greeting"
+                        >
+                            Hello world
+                        </div>
+                        <div
+                            className="c-slide__desc"
+                        >
+                            Lorem Ipsum.
+                        </div>
                     </div>
                 </div>
             </div>

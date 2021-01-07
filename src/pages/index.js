@@ -1,6 +1,6 @@
 import React from "react"
-import "../css/bootstrap-reboot.min.css"
-import "../scss/site.scss"
+import "../styles/bootstrap-reboot.min.css"
+import "../styles/site.scss"
 import Intro from "../components/Intro.js"
 import WorkExample from "../components/WorkExample.js"
 

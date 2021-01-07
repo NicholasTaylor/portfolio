@@ -5,49 +5,53 @@ class WorkExample extends React.Component {
     render() {
         return(
             <div
-                className="c-slide"
+                className="c-slideContainer"
             >
                 <div
-                    className="c-slide__content"
+                    className="c-slide"
                 >
-                    <h1
-                        className="c-slide__name"
-                    >
-                        {this.props.name}
-                    </h1>
                     <div
-                        className="c-slide__desc"
+                        className="c-slide__content"
                     >
-                        {this.props.desc}
-                    </div>
-                    {
-                        this.props.btnLiveCopy && this.props.btnLiveHref ?
-                            <div
-                                className="c-slide__btn"
-                            >
-                                <Link
-                                    to={this.props.btnLiveHref}
+                        <h1
+                            className="c-slide__name"
+                        >
+                            {this.props.name}
+                        </h1>
+                        <div
+                            className="c-slide__desc"
+                        >
+                            {this.props.desc}
+                        </div>
+                        {
+                            this.props.btnLiveCopy && this.props.btnLiveHref ?
+                                <div
+                                    className="c-slide__btn"
                                 >
-                                    {this.props.btnLiveCopy}
-                                </Link>
-                            </div>
+                                    <Link
+                                        to={this.props.btnLiveHref}
+                                    >
+                                        {this.props.btnLiveCopy}
+                                    </Link>
+                                </div>
+                                :
+                                ''
+                        }
+                        {
+                            this.props.btnGitCopy && this.props.btnGitHref ?
+                                <div
+                                    className="c-slide__btn"
+                                >
+                                    <Link
+                                        to={this.props.btnGitHref}
+                                    >
+                                        {this.props.btnGitCopy}
+                                    </Link>
+                                </div>
                             :
                             ''
-                    }
-                    {
-                        this.props.btnGitCopy && this.props.btnGitHref ?
-                            <div
-                                className="c-slide__btn"
-                            >
-                                <Link
-                                    to={this.props.btnGitHref}
-                                >
-                                    {this.props.btnGitCopy}
-                                </Link>
-                            </div>
-                        :
-                        ''
-                    }
+                        }
+                    </div>
                 </div>
             </div>
         )

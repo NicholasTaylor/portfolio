@@ -1,0 +1,23 @@
+$font-family-base: pragamatica,'helvetica neue', helvetica, arial, sans-serif;
+$font-family-headline: brandon-grotesque, 'bebas neue', sans-serif;
+$color-bg: #2d4476;
+$color-bg-alt: #5f72ae;
+$color-bg-alt2: #e6876e;
+$color-text: #fffbeb;
+$color-accent: #ed8f31;
+$color-accent-alt: #ffdc57;
+
+@mixin standout {
+    font-family: $font-family-headline;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+@mixin headline {
+    @include standout;
+    font-size: 1.9rem;
+    line-height: 1;
+    margin: 0;
+    color: $color-accent;
+    letter-spacing: .1em;
+}
