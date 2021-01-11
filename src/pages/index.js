@@ -3,21 +3,65 @@ import "../styles/bootstrap-reboot.min.css"
 import "../styles/site.scss"
 import Intro from "../components/Intro.js"
 import WorkExample from "../components/WorkExample.js"
+import { graphql } from "gatsby"
 
-export default function Home() {
+export default function Home({ data }) {
+  console.log(data.workExamples);
   return (
     <div
       className="l-container"
     >
-      <Intro />
-      <WorkExample 
-        name="HumbleBike"
-        desc="A no-frills React-based single-page app for CitiBike users with slow connections. But even if you have good signal, don't miss out on the e-bike filter!"
-        btnLiveCopy="Try It Out!"
-        btnLiveHref="https://humble.bike"
-        btnGitCopy="GitHub Repo"
-        btnGitHref="https://github.com/NicholasTaylor/HumbleBike_v2"
-      />
+      {data.intro.edges.map(({ node }, index) => (
+        <Intro
+          key={index}        
+        />
+      ))}
+      {data.workExamples.edges.map(({ node }, index) => (
+        <WorkExample
+          key={index}
+          name={node.frontmatter.title}
+          desc={node.rawMarkdownBody}
+          btnLiveCopy={node.frontmatter.live_text}
+          btnLiveHref={node.frontmatter.live_uri}
+          btnGitCopy={node.frontmatter.gh_text}
+          btnGitHref={node.frontmatter.gh_uri}         
+        />
+      ))}      
     </div>
   )
 }
+
+export const query = graphql`
+{
+  intro: allMarkdownRemark(filter: {frontmatter: {type: {eq: "intro"}}}) {
+    edges {
+      node {
+        rawMarkdownBody
+        frontmatter {
+          title
+          type
+          live_uri
+          live_text
+          gh_uri
+          gh_text
+        }
+      }
+    }
+  }
+  workExamples: allMarkdownRemark(filter: {frontmatter: {type: {eq: "workExample"}}}) {
+    edges {
+      node {
+        rawMarkdownBody
+        frontmatter {
+          title
+          type
+          live_uri
+          live_text
+          gh_uri
+          gh_text
+        }
+      }
+    }
+  }
+}
+`
