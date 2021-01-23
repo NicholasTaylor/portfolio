@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby';
 
 class WorkExample extends React.Component {
     render() {
@@ -28,11 +27,11 @@ class WorkExample extends React.Component {
                                 <div
                                     className="c-slide__btn"
                                 >
-                                    <Link
-                                        to={this.props.btnLiveHref}
+                                    <a
+                                        href={this.props.btnLiveHref}
                                     >
                                         {this.props.btnLiveCopy}
-                                    </Link>
+                                    </a>
                                 </div>
                                 :
                                 ''
@@ -42,11 +41,11 @@ class WorkExample extends React.Component {
                                 <div
                                     className="c-slide__btn"
                                 >
-                                    <Link
-                                        to={this.props.btnGitHref}
+                                    <a
+                                        href={this.props.btnGitHref}
                                     >
                                         {this.props.btnGitCopy}
-                                    </Link>
+                                    </a>
                                 </div>
                             :
                             ''
