@@ -2,16 +2,15 @@
 
 .l-container {
   width: 100vw;
-  /*background-color: $color-bg;*/
   color: $color-text;
   font-family: $font-family-base;
-  font-size: .95rem;
+  font-size: .9rem;
   line-height: 1;
-  font-weight: 400;
+  font-weight: bold;
 }
 
 .c-slideContainer {
-  background: linear-gradient($color-bg, $color-bg-alt, $color-bg-alt2);
+  background: $color-bg;
   width: 100vw;
   height: 100vh;
 }
@@ -25,7 +24,8 @@
     position: absolute;
     bottom: 33%;
     left: 5vw;
-    transform: translateY(50%)
+    transform: translateY(50%);
+    z-index: 100;
   }
   &__greeting {
     @include headline;
@@ -34,28 +34,31 @@
     @include headline;
   }
   &__desc {
-    padding: .5em 0 1em 0;
+    padding: .5em 0 .5em 0;
   }
   &__btn {
-    background-color: $color-accent;
+    background-color: $color-bg-btn;
     display: inline-block;
-    padding: .75em;
-    margin: 0 1em 0 0;
+    padding: .5em;
+    margin: 0 .75em 0 0;
     border: 1px solid transparent;
     transition: .25s;
-    font-size: .8rem;
-    @include standout;
+    font-size: 1rem;
+    letter-spacing: -0.03em;
     a {
-      color: $color-text;
+      color: $color-text-btn;
       text-decoration: none;
     }
     &:hover {
       background-color: $color-bg;
-      border: 1px solid $color-accent;
-      padding: .5em 1em;
+      border: 1px solid $color-text-btn;
       a {
-        color: $color-accent;
+        color: $color-text-btn;
       }
     }
+  }
+  &__parabgimg {
+    width: 100%;
+    height: auto;
   }
 }
