@@ -6,11 +6,38 @@
   font-family: $font-family-base;
   font-size: .9rem;
   line-height: 1;
-  font-weight: bold;
+  background: $color-bg;
+  min-height: 100vh;
+}
+
+.c-mainmenu {
+  width:90vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  &__headline {
+    @include headline;
+    padding: 1em 0;
+  }
+  &__link {
+    @include headline;
+    color: #00887a;
+    padding: .1em 0;
+    letter-spacing: 0;
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+  &__copy {
+    font-weight: 100;
+    letter-spacing: 0.03em;
+    line-height: 1;
+  }
 }
 
 .c-slideContainer {
-  background: $color-bg;
   width: 100vw;
   height: 100vh;
 }

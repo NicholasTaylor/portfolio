@@ -1,22 +1,23 @@
 $font-family-base: pragamatica,'helvetica neue', helvetica, arial, sans-serif;
-$font-family-headline: din-1451-lt-pro-engschrift, brandon-grotesque, 'bebas neue', sans-serif;
-$color-bg: #ffaa33;
-$color-bg-alt: #5f72ae;
-$color-bg-alt2: #e6876e;
-$color-text: #202020;
+$font-family-headline: brandon-grotesque, 'bebas neue', sans-serif;
+$color-bg: #2d283e;
+$color-text: #d1d7e0;
+$color-accent: #802bb1;
+
 $color-text-btn: #ffffff;
-$color-accent: #000000;
 $color-bg-btn: #ec4e20;
 
 @mixin standout {
     font-family: $font-family-headline;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 @mixin headline {
     @include standout;
-    font-size: 2.5rem;
+    font-size: 2rem;
     line-height: 1;
     margin: 0;
     color: $color-accent;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
 }
