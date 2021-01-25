@@ -12,9 +12,18 @@ export default function home() {
             className="c-mainmenu"
         >
             <div
-                className="c-mainmenu__headline"
+                className="c-mainmenu__title"
             >
-                Hi! I'm Nick!
+                <div
+                    className="c-mainmenu__headline"
+                >
+                    Hi! I'm Nick!
+                </div>
+                <div
+                    className="c-mainmenu__copy"
+                >
+                    I'm a web developer
+                </div>
             </div>
             <div
                 className="c-mainmenu__link"
@@ -22,7 +31,7 @@ export default function home() {
                 <Link
                     to="/works/"
                 >
-                    Projects
+                    My Projects
                 </Link>
             </div>
             <div
@@ -31,7 +40,7 @@ export default function home() {
                 <Link
                     to="/works/"
                 >
-                    About Me
+                    A Little About Me
                 </Link>
             </div>
             <div
@@ -40,7 +49,7 @@ export default function home() {
                 <Link
                     to="/works/"
                 >
-                    Contact
+                    Let's Get in Touch
                 </Link>                                
             </div>
         </div>

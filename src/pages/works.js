@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Card from "../components/Card"
+import Nav from "../components/Nav"
 import "../styles/bootstrap-reboot.min.css"
 import "../styles/site.scss"
 
@@ -9,6 +10,8 @@ export default function home({ data }) {
     <div
       className="l-container"
     >
+      <Nav
+      />
       {data.allMarkdownRemark.edges.map(({ node }, index) => (
         <Card
           key={index}

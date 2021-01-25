@@ -1,15 +1,19 @@
-$font-family-base: pragamatica,'helvetica neue', helvetica, arial, sans-serif;
-$font-family-headline: brandon-grotesque, 'bebas neue', sans-serif;
-$color-bg: #2d283e;
+$font-family-base: interstate, pragamatica,'helvetica neue', helvetica, arial, sans-serif;
+$font-family-headline: interstate, nort, 'bebas neue', sans-serif;
+$color-bg: #151515;
 $color-text: #d1d7e0;
-$color-accent: #802bb1;
+$color-accent: #ffffff;
+$color-title: #f0f0f0;
 
 $color-text-btn: #ffffff;
 $color-bg-btn: #ec4e20;
 
 @mixin standout {
     font-family: $font-family-headline;
-    font-weight: 500;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    /*letter-spacing: 0.05em;
+    text-transform: uppercase;*/
 }
 
 @mixin headline {
@@ -18,6 +22,10 @@ $color-bg-btn: #ec4e20;
     line-height: 1;
     margin: 0;
     color: $color-accent;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+}
+
+@mixin navanim {
+    animation-duration: .25s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
 }
