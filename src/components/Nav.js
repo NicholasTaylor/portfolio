@@ -8,24 +8,10 @@ export default class Nav extends React.Component {
             flagNav: false
         };
     }
-    handleClick= () => {
+    handleClick = () => {
         const flagNav = this.state.flagNav;
-        const linetop = document.querySelector('.c-navicon__linetop');
-        const linemiddle = document.querySelector('.c-navicon__linemiddle');
-        const linebottom = document.querySelector('.c-navicon__linebottom');
-        const nav = document.querySelector('.l-nav');
-        if (this.state.flagNav === false){
-            linetop.style.animationName = 'topnavon';
-            linemiddle.style.animationName = 'middlenavon';
-            linebottom.style.animationName = 'bottomnavon';
-            nav.style.animationName = 'navon';
-        } else {
-            linetop.style.animationName = 'topnavoff';
-            linemiddle.style.animationName = 'middlenavoff';
-            linebottom.style.animationName = 'bottomnavoff';
-            nav.style.animationName = 'navoff';
-        }
-        this.setState({flagNav: !flagNav})
+        let toggleArr = [document.querySelector('.c-navicon__linetop').style.animationName,document.querySelector('.c-navicon__linemiddle').style.animationName,document.querySelector('.c-navicon__linebottom').style.animationName,document.querySelector('.l-nav').style.animationName] = this.state.flagNav === false ? ['topnavon', 'middlenavon', 'bottomnavon', 'navon'] : ['topnavoff', 'middlenavoff', 'bottomnavoff', 'navoff'];
+        this.setState({flagNav: !flagNav});
     }
 
     render(){

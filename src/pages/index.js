@@ -1,7 +1,8 @@
-import React from "react"
-import { Link } from "gatsby"
-import "../styles/bootstrap-reboot.min.css"
-import "../styles/site.scss"
+import React from "react";
+import { Link } from "gatsby";
+import "../styles/bootstrap-reboot.min.css";
+import "../styles/site.scss";
+import manhattan_bridge from '../images/manhattan-bridge.mp4';
 
 export default function home() {
   return (

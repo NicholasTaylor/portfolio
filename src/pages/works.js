@@ -23,7 +23,8 @@ export default function home({ data }) {
           btnGitCopy={node.frontmatter.gh_text}
           btnGitHref={node.frontmatter.gh_uri}  
           tags={node.frontmatter.tags}  
-          priority={node.frontmatter.priority}         
+          priority={node.frontmatter.priority} 
+          videobg={node.frontmatter.videobg ? node.frontmatter.videobg.publicURL : '' }        
         />
       ))}    
     </div>
@@ -45,6 +46,9 @@ query MyQuery {
           gh_text
           priority
           tags
+          videobg {
+            publicURL
+          }
         }
       }
     }
