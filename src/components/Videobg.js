@@ -2,31 +2,35 @@ import React from 'react'
 
 export default class videobg extends React.Component {
     render(){
-        return(
-            <div
-                className="l-videobgcontainer"
-            >
+        if (this.props.src){
+            return(
                 <div
-                    className="c-filter"
+                    className="l-videobgcontainer"
                 >
-                </div>
-                <div
-                    className="c-videobg"
-                >
-                    <video 
-                        muted 
-                        autoPlay 
-                        loop 
-                        playsInline 
-                        className="c-videobg__video"
+                    <div
+                        className="c-filter"
                     >
-                        <source
-                            src={ this.props.src } 
-                            type="video/mp4"
-                        />
-                    </video>
+                    </div>
+                    <div
+                        className="c-videobg"
+                    >
+                        <video 
+                            muted 
+                            autoPlay 
+                            loop 
+                            playsInline 
+                            className="c-videobg__video"
+                        >
+                            <source
+                                src={ this.props.src } 
+                                type="video/mp4"
+                            />
+                        </video>
+                    </div>
                 </div>
-            </div>
-        )
+            )
+        } else {
+            return null;
+        }
     }
 }

@@ -6,6 +6,9 @@ type: "workExample"
 category: "Tools"
 tags: ['Python']
 priority: 2
+parallaximg: "../images/quotusStupidus.png"
+parallaxoffset: .15
+parallaxspeed: .15
 ---
 
 Smart quotes. They're beautiful. A typographer's dream. But not everything is UTF-8 friendly. This was a quick tool I made to convert smart quotes and apostrophes in large passages of text to their, ahem, "dumb" equivalent.

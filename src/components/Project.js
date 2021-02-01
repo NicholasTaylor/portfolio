@@ -1,20 +1,14 @@
-import React from 'react';
+import React from "react"
 import Videobg from './Videobg'
 
-class WorkExample extends React.Component {
-
-    render() { 
+class Card extends React.Component {
+    render(){
         return(
             <div
-                className="c-slideContainer"
             > 
-                {this.props.videobg ?
-                    <Videobg
-                        src={this.props.videobg}
-                    />
-                    :
-                    ''
-                }
+                <Videobg
+                    src={this.props.videobg}
+                />
                 <div
                     className="c-slide"
                 >
@@ -66,4 +60,4 @@ class WorkExample extends React.Component {
     }
 }
 
-export default WorkExample;
+export default Card;

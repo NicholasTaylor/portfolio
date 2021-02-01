@@ -10,7 +10,7 @@ export default class Nav extends React.Component {
     }
     handleClick = () => {
         const flagNav = this.state.flagNav;
-        let toggleArr = [document.querySelector('.c-navicon__linetop').style.animationName,document.querySelector('.c-navicon__linemiddle').style.animationName,document.querySelector('.c-navicon__linebottom').style.animationName,document.querySelector('.l-nav').style.animationName] = this.state.flagNav === false ? ['topnavon', 'middlenavon', 'bottomnavon', 'navon'] : ['topnavoff', 'middlenavoff', 'bottomnavoff', 'navoff'];
+        [document.querySelector('.c-navicon__linetop').style.animationName,document.querySelector('.c-navicon__linemiddle').style.animationName,document.querySelector('.c-navicon__linebottom').style.animationName,document.querySelector('.l-nav').style.animationName] = this.state.flagNav === false ? ['topnavon', 'middlenavon', 'bottomnavon', 'navon'] : ['topnavoff', 'middlenavoff', 'bottomnavoff', 'navoff'];
         this.setState({flagNav: !flagNav});
     }
 
@@ -18,6 +18,7 @@ export default class Nav extends React.Component {
         return(
             <div>
                 <div
+                    aria-hidden="true"
                     className="l-navicon"
                     onClick={() => this.handleClick()}
                 >
@@ -28,19 +29,19 @@ export default class Nav extends React.Component {
                         viewBox="0 0 26 21"
                     >
                         <line 
-                            class="c-navicon__line c-navicon__linetop" 
+                            className="c-navicon__line c-navicon__linetop" 
                             y1="0.5" 
                             x2="26" 
                             y2="0.5"
                         />
                         <line 
-                            class="c-navicon__line c-navicon__linemiddle" 
+                            className="c-navicon__line c-navicon__linemiddle" 
                             y1="10.5" 
                             x2="26" 
                             y2="10.5"
                         />
                         <line 
-                            class="c-navicon__line c-navicon__linebottom" 
+                            className="c-navicon__line c-navicon__linebottom" 
                             y1="20.5" 
                             x2="26" 
                             y2="20.5"
