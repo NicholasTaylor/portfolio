@@ -1,12 +1,16 @@
 $font-family-base: interstate, pragamatica,'helvetica neue', helvetica, arial, sans-serif;
-$font-family-headline: interstate, nort, 'bebas neue', sans-serif;
+$font-family-headline: interstate, nort, sans-serif;
+/*
 $color-bg: #151515;
 $color-text: #d1d7e0;
-$color-accent: #ffffff;
-$color-title: #f0f0f0;
-
-$color-text-btn: #ffffff;
+$color-accent: #f0f0f0;
 $color-bg-btn: #ec4e20;
+*/
+
+$color-bg: #574c4f;
+$color-text: #f0f0f0;
+$color-accent: #efdab9;
+$color-bg-btn: #78b0a0;
 
 @mixin standout {
     font-family: $font-family-headline;

@@ -3,11 +3,11 @@ import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons'
 import Project from "../components/Project"
 import Nav from "../components/Nav"
 import Parallaximg from "../components/Parallaximg"
+import {graphql} from "gatsby"
 import "../styles/bootstrap-reboot.min.css"
 import "../styles/site.scss"
 
 export default function home({ data }) {
-  let parallax;
   return (
     <div
       className="l-container"
@@ -16,13 +16,13 @@ export default function home({ data }) {
       />
       <Parallax
         pages={data.allMarkdownRemark.edges.length}
+        className="c-project"
       >
         {data.allMarkdownRemark.edges.map(({ node }, index) => (
           <div
             key={index}
           >          
             <ParallaxLayer
-              className="c-slide__container"
               offset={index}
             >
               <Project
@@ -35,10 +35,9 @@ export default function home({ data }) {
                 btnGitHref={node.frontmatter.gh_uri}  
                 tags={node.frontmatter.tags}  
                 priority={node.frontmatter.priority} 
-                videobg={node.frontmatter.videobg ? node.frontmatter.videobg.publicURL : '' } 
-                parallaximg={node.frontmatter.parallaximg ? node.frontmatter.parallaximg.publicURL : '' } 
-                parallaxoffset={node.frontmatter.parallaxoffset}
-                parallaxspeed={node.frontmatter.parallaxspeed}
+                videobg={node.frontmatter.videobg ? node.frontmatter.videobg.publicURL : '' }
+                xalign={node.frontmatter.xalign}
+                yalign={node.frontmatter.yalign}
               />
             </ParallaxLayer>
             <Parallaximg
@@ -46,6 +45,7 @@ export default function home({ data }) {
               img={node.frontmatter.parallaximg}
               offset={node.frontmatter.parallaxoffset}
               speed={node.frontmatter.parallaxspeed}
+              align={node.frontmatter.parallaxalign}
             >
             </Parallaximg>
           </div>
@@ -70,11 +70,14 @@ query MyQuery {
           gh_text
           priority
           tags
+          xalign
+          yalign
           parallaximg {
             publicURL
           }
           parallaxoffset
           parallaxspeed
+          parallaxalign
           videobg {
             publicURL
           }

@@ -5,21 +5,21 @@ export default class videobg extends React.Component {
         if (this.props.src){
             return(
                 <div
-                    className="l-videobgcontainer"
+                    className="c-project__videobg"
                 >
                     <div
-                        className="c-filter"
+                        className="c-project__videofilter"
                     >
                     </div>
                     <div
-                        className="c-videobg"
+                        className="c-project__videocontainer"
                     >
                         <video 
                             muted 
                             autoPlay 
                             loop 
                             playsInline 
-                            className="c-videobg__video"
+                            className="c-project__videoasset"
                         >
                             <source
                                 src={ this.props.src } 

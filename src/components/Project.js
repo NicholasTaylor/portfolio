@@ -1,8 +1,12 @@
 import React from "react"
 import Videobg from './Videobg'
 
-class Card extends React.Component {
+class Project extends React.Component {
     render(){
+        const allX = ['left', 'center', 'right'];
+        const allY = ['top', 'middle', 'bottom'];
+        const xalign = this.props.xalign && allX.indexOf(this.props.xalign.toLowerCase()) != -1 ? ` c-project__contentx--${this.props.xalign.toLowerCase()}` : '';
+        const yalign = this.props.yalign && allY.indexOf(this.props.yalign.toLowerCase()) != -1 ? ` c-project__contenty--${this.props.yalign.toLowerCase()}` : '';
         return(
             <div
             > 
@@ -10,49 +14,53 @@ class Card extends React.Component {
                     src={this.props.videobg}
                 />
                 <div
-                    className="c-slide"
+                    className="c-project__content"
                 >
                     <div
-                        className="c-slide__content"
+                        className={`c-project__contentx${xalign}`}
                     >
-                        <h1
-                            className="c-slide__name"
-                        >
-                            {this.props.name}
-                        </h1>
                         <div
-                            className="c-slide__desc"
+                            className={`c-project__contenty${yalign}`}
                         >
-                            {this.props.desc}
-                        </div>
-                        {
-                            this.props.btnLiveCopy && this.props.btnLiveHref ?
-                                <div
-                                    className="c-slide__btn"
-                                >
-                                    <a
-                                        href={this.props.btnLiveHref}
+                            <h1
+                                className="c-project__name"
+                            >
+                                {this.props.name}
+                            </h1>
+                            <div
+                                className="c-project__desc"
+                            >
+                                {this.props.desc}
+                            </div>
+                            {
+                                this.props.btnLiveCopy && this.props.btnLiveHref ?
+                                    <div
+                                        className="c-project__btn"
                                     >
-                                        {this.props.btnLiveCopy}
-                                    </a>
-                                </div>
+                                        <a
+                                            href={this.props.btnLiveHref}
+                                        >
+                                            {this.props.btnLiveCopy}
+                                        </a>
+                                    </div>
+                                    :
+                                    ''
+                            }
+                            {
+                                this.props.btnGitCopy && this.props.btnGitHref ?
+                                    <div
+                                        className="c-project__btn"
+                                    >
+                                        <a
+                                            href={this.props.btnGitHref}
+                                        >
+                                            {this.props.btnGitCopy}
+                                        </a>
+                                    </div>
                                 :
                                 ''
-                        }
-                        {
-                            this.props.btnGitCopy && this.props.btnGitHref ?
-                                <div
-                                    className="c-slide__btn"
-                                >
-                                    <a
-                                        href={this.props.btnGitHref}
-                                    >
-                                        {this.props.btnGitCopy}
-                                    </a>
-                                </div>
-                            :
-                            ''
-                        }
+                            }
+                        </div>
                     </div>
                 </div>
             </div>
@@ -60,4 +68,4 @@ class Card extends React.Component {
     }
 }
 
-export default Card;
+export default Project;

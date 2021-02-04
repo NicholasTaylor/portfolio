@@ -20,7 +20,7 @@
   animation-fill-mode: forwards;
   width:90vw;
   position: absolute;
-  top: 60%;
+  top: 60vh;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -31,7 +31,7 @@
   }
   &__headline {
     @include headline;
-    color: $color-title;
+    color: $color-accent;
   }
   &__copy {
     font-size: 1rem;
@@ -49,22 +49,50 @@
   }
 }
 
-.c-slide {
-  width: 75vw;
-  height: 100vh;
-  margin: 0;
-  position: relative;
-  &__container {
-  }
+.c-project {
+  scrollbar-width: none;
+  height: 100vh !important;
   &__content {
-    position: absolute;
-    bottom: 33%;
-    left: 5vw;
-    transform: translateY(50%);
-    z-index: 100;
+    width: 75vw;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+    &__greeting {
+      @include headline;
+    }
   }
-  &__greeting {
-    @include headline;
+  &__contentx {
+    position: absolute;
+    z-index: 100;
+    width:100%;
+    left:50vw;
+    transform: translateX(-50%);
+    text-align: center;
+    &--right {
+      left: 95vw;
+      transform: translateX(-100%);
+      text-align: right;
+    }
+    &--left {
+      left: 5vw;
+      text-align: left;
+      transform: translateX(0%)
+    }
+  }
+  &__contenty {
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    top: 50vh;
+    transform: translateY(-50%);
+    &--top {
+      top: 10vh;
+      transform: translateY(0%);
+    }
+    &--bottom {
+      top: 95vh;
+      transform: translateY(-100%);
+    }
   }
   &__name {
     @include headline;
@@ -82,20 +110,47 @@
     font-size: 1rem;
     letter-spacing: -0.03em;
     a {
-      color: $color-text-btn;
+      color: $color-bg;
       text-decoration: none;
+      font-weight:500
     }
     &:hover {
       background-color: $color-bg;
-      border: 1px solid $color-text-btn;
+      border: 1px solid $color-text;
       a {
-        color: $color-text-btn;
+        color: $color-text;
       }
     }
   }
   &__paraobj {
-    text-align: right;
+    text-align: center;
     pointer-events: none;
+    &--left {
+      text-align: left;
+    }
+    &--right {
+      text-align: right;
+    }
+  }  
+  &__videocontainer {
+    z-index: 90;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+  }
+  &__videoasset {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+  &__videofilter {
+    width: 100vw;
+    height: 100vh;
+    background-color: #{$color-bg}4D;
+    z-index: 95;
+    position: absolute;
   }
 }
 
@@ -161,26 +216,4 @@
     transform-origin: 60% 125%;
     stroke: $color-accent;
   }
-}
-
-.c-videobg {
-  z-index: 90;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  position: absolute;
-  &__video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
-  }
-}
-
-.c-filter {
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0,0,0,0.3);
-  z-index: 95;
-  position: absolute;
 }
