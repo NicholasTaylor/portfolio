@@ -1,18 +1,14 @@
 import React from "react"
-import Videobg from './Videobg'
 
 class Project extends React.Component {
     render(){
         const allX = ['left', 'center', 'right'];
         const allY = ['top', 'middle', 'bottom'];
-        const xalign = this.props.xalign && allX.indexOf(this.props.xalign.toLowerCase()) != -1 ? ` c-project__contentx--${this.props.xalign.toLowerCase()}` : '';
-        const yalign = this.props.yalign && allY.indexOf(this.props.yalign.toLowerCase()) != -1 ? ` c-project__contenty--${this.props.yalign.toLowerCase()}` : '';
+        const xalign = this.props.xalign && allX.indexOf(this.props.xalign.toLowerCase()) !== -1 ? ` c-project__contentx--${this.props.xalign.toLowerCase()}` : '';
+        const yalign = this.props.yalign && allY.indexOf(this.props.yalign.toLowerCase()) !== -1 ? ` c-project__contenty--${this.props.yalign.toLowerCase()}` : '';
         return(
             <div
             > 
-                <Videobg
-                    src={this.props.videobg}
-                />
                 <div
                     className="c-project__content"
                 >

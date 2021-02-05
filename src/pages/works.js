@@ -1,8 +1,9 @@
 import React from "react"
 import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons'
+import Videobg from '../components/Videobg'
 import Project from "../components/Project"
-import Nav from "../components/Nav"
 import Parallaximg from "../components/Parallaximg"
+import Nav from "../components/Nav"
 import {graphql} from "gatsby"
 import "../styles/bootstrap-reboot.min.css"
 import "../styles/site.scss"
@@ -25,6 +26,9 @@ export default function home({ data }) {
             <ParallaxLayer
               offset={index}
             >
+              <Videobg
+                  src={node.frontmatter.videobg ? node.frontmatter.videobg.publicURL : '' }
+              />
               <Project
                 name={node.frontmatter.title}
                 desc={node.rawMarkdownBody}
@@ -34,8 +38,7 @@ export default function home({ data }) {
                 btnGitCopy={node.frontmatter.gh_text}
                 btnGitHref={node.frontmatter.gh_uri}  
                 tags={node.frontmatter.tags}  
-                priority={node.frontmatter.priority} 
-                videobg={node.frontmatter.videobg ? node.frontmatter.videobg.publicURL : '' }
+                priority={node.frontmatter.priority}
                 xalign={node.frontmatter.xalign}
                 yalign={node.frontmatter.yalign}
               />
