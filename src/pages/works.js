@@ -60,7 +60,7 @@ export default function home({ data }) {
 
 export const query = graphql`
 query MyQuery {
-  allMarkdownRemark(sort: {fields: frontmatter___priority, order: ASC}) {
+  allMarkdownRemark(sort: {fields: frontmatter___priority, order: ASC}, filter: {frontmatter: {type: {nin: "aboutme"}}}) {
     edges {
       node {
         rawMarkdownBody

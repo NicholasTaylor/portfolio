@@ -14,10 +14,8 @@ $color-bg-btn: #78b0a0;
 
 @mixin standout {
     font-family: $font-family-headline;
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: -0.05em;
-    /*letter-spacing: 0.05em;
-    text-transform: uppercase;*/
 }
 
 @mixin headline {

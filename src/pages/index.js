@@ -38,7 +38,7 @@ export default function home() {
                 className="c-mainmenu__link"
             >
                 <Link
-                    to="/works/"
+                    to="/aboutme/"
                 >
                     A Little About Me
                 </Link>

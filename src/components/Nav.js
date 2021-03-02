@@ -62,7 +62,7 @@ export default class Nav extends React.Component {
                         </Link>
                         <Link
                             className="c-nav__link"
-                            to="/work/"
+                            to="/works/"
                         >
                             Projects
                         </Link>
