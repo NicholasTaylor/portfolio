@@ -47,7 +47,7 @@ export default function home() {
                 className="c-mainmenu__link"
             >
                 <Link
-                    to="/works/"
+                    to="/contact/"
                 >
                     Let's Get in Touch
                 </Link>                                

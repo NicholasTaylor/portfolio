@@ -18,9 +18,19 @@ export default function aboutme({ data }) {
                 className="c-aboutme__content"
             >
                 <div
+                    className="c-aboutme__headline"
+                >
+                    About Me
+                </div>
+                <div
                     className="c-aboutme__copy"
                 >
-                    I've been coding professionally in some way, shape or form since 2008. 
+                  <p>
+                    It all started with a bored teenager who right-clicked and chose the "View Source" option in Internet Explorer. We've all done it and saw the mass of code that ensues. But back then, I was curious how it worked. How did it all come together to build the beautiful websites we saw?
+                  </p>
+                  <p>
+                    Many hours, months, and years of experimentation later, I began professionally coding HTML and CSS in 2008. Along the way, I picked up a variety of other skills in the web development landscape (SQL, Python, etc.). Meanwhile, I formed an appreciation for how "the other half" lives by working as a production artist on a design team and as a marketing professional for a few years.
+                  </p>
                 </div>
                 <div
                     className="c-aboutme__headline"
@@ -53,17 +63,6 @@ export default function aboutme({ data }) {
                             key={index}
                         />
                     ))}
-                </div>
-                <div
-                    className="c-aboutme__headline"
-                >
-                    Adobe Creative&nbsp;Cloud
-                </div>
-                <div
-                    className="c-aboutme__list"
-                >
-                    Photoshop, Illustrator, XD, Audition, Premiere Pro, After Effects
-
                 </div>
             </div>
         </div>
