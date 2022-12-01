@@ -149,6 +149,9 @@
       text-decoration: none;
       font-weight:500
     }
+    &:last-child {
+      margin: 0;
+    }
     &:hover {
       background-color: $color-bg;
       border: 1px solid $color-text;
@@ -186,6 +189,66 @@
     background-color: #{$color-bg}4D;
     z-index: 95;
     position: absolute;
+  }
+}
+
+.c-contactForm {
+  width: 75vw;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  &__outer {
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+  }
+  &__field {
+    margin: 1em 0;
+  }
+  &__label {
+    margin: 0 0 .25em 0;
+  }
+  &__input {
+    display: block;
+    width: 100%; 
+    box-sizing: border-box;
+  }
+  &__inputTextarea {
+    height: 4em;
+  }
+  &__submitBtn {
+    display: block;
+  }
+  &__error {
+    display: none;
+    position: absolute;
+    width: 70vw;
+    height: 20vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $color-accent;
+    border: $color-bg solid 4px;
+    color: $color-bg;
+    border-radius: 1em;
+    z-index: 110;
+    text-align: center;
+  }
+  &__errorMsg {
+    @include standout;
+    font-size: 1em;
+    padding: 1em;
+    font-weight: 400;
+  }
+  &__errorOk {
+    display: block;
+    background-color: $color-text;
+    width: 4em;
+    margin: 0 auto;
+    line-height: 1.5;
+    border-radius: 4px;
+    font-weight: bold;
   }
 }
 

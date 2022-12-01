@@ -49,8 +49,8 @@ export default function home() {
                 <Link
                     to="/contact/"
                 >
-                    Let's Get in Touch
-                </Link>                                
+                    Let's Chat
+                </Link>
             </div>
         </div>
     </div>

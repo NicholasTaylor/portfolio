@@ -71,13 +71,13 @@ export default class Nav extends React.Component {
                             to="/aboutme/"
                         >
                             About Me
-                        </Link>
+                        </Link>   
                         <Link
                             className="c-nav__link"
                             to="/contact/"
                         >
                             Contact
-                        </Link>                                        
+                        </Link>                                     
                     </div>
                 </nav>
             </div>
